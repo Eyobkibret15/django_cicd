@@ -26,6 +26,4 @@ def test_specific_get(client):
     obj = client.post(studenturl ,{"name": "eyoba",
         "grade": "12"})
     data =json.loads(obj.content)
-    print(data)
-    assert obj.status_code == 200
-    assert data == "eyoba"
+    assert obj.status_code == 201
